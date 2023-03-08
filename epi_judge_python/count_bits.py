@@ -2,8 +2,12 @@ from test_framework import generic_test
 
 
 def count_bits(x: int) -> int:
-    # TODO - you fill in here.
-    return 0
+    bits = 0
+    while x:
+        x = x & (x - 1)
+        bits += 1
+
+    return bits
 
 
 if __name__ == '__main__':
